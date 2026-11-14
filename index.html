@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+  <meta name="theme-color" content="#f7f8fa" />
+  <meta name="description" content="مسیر یادگیری رفتار سازه، طراحی و مهندسی سازه در عصر هوش مصنوعی" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Structure Lab" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/src/styles.css" />
+  <title>Structure Lab | آزمایشگاه رفتار سازه</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">S</div>
+        <div><strong>STRUCTURE LAB</strong><small>آزمایشگاه یادگیری سازه</small></div>
+      </div>
+      <div class="top-actions">
+        <button class="auth-button" id="authOpenBtn" type="button">ورود شخصی</button>
+        <button class="icon-button" id="installBtn" hidden aria-label="نصب برنامه">＋</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <p class="eyebrow">مسیر حرفه‌ای پنج‌ساله</p>
+        <h1>از فهم رفتار سازه<br><span>تا مهندسی هوشمند</span></h1>
+        <p class="muted">یادگیری عمیق، تحلیل مهندسی و تسلط بر ابزارهای آینده</p>
+      </section>
+
+      <section class="today-card">
+        <div class="today-head">
+          <div>
+            <span class="eyebrow">جلسه امروز</span>
+            <h2 id="lessonTitle">سازه چگونه رفتار می‌کند؟</h2>
+            <p class="muted" id="lessonMeta">درس ۰۱ · مبانی رفتار سازه</p>
+          </div>
+          <div class="lesson-number">۰۱</div>
+        </div>
+        <div class="progress-line"><span id="progressBar"></span></div>
+        <div class="progress-meta"><span>پیشرفت دوره</span><strong id="progressText">۰ از ۱۰۰ جلسه</strong></div>
+        <button class="primary-button" id="openLesson">ورود به جلسه <span>←</span></button>
+      </section>
+
+      <section class="section-block">
+        <div class="section-title"><h2>نقشه راه یادگیری</h2><span class="muted">۵ سال آینده</span></div>
+        <div class="roadmap" id="roadmap">
+          <article class="roadmap-item active"><span class="step">۰۱</span><div><strong>مبانی رفتار سازه</strong><small>تعادل، سازگاری، سختی و مسیر انتقال بار</small></div><span class="status">اکنون</span></article>
+          <article class="roadmap-item"><span class="step">۰۲</span><div><strong>بتن‌آرمه و فولاد</strong><small>رفتار اعضا، اتصالات و جزئیات شکل‌پذیر</small></div></article>
+          <article class="roadmap-item"><span class="step">۰۳</span><div><strong>زلزله و تحلیل پیشرفته</strong><small>دینامیک، طیف، غیرخطی و عملکرد لرزه‌ای</small></div></article>
+          <article class="roadmap-item"><span class="step">۰۴</span><div><strong>مدل‌سازی و طراحی</strong><small>ETABS، SAFE، SAP2000 و کنترل نتایج</small></div></article>
+          <article class="roadmap-item"><span class="step">۰۵</span><div><strong>Python و مهندسی هوشمند</strong><small>اتوماسیون، داده، API و عامل‌های هوش مصنوعی</small></div></article>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-title"><h2>ساختار هر جلسه</h2><span class="muted">۶ گام ثابت</span></div>
+        <div class="session-grid">
+          <div class="session-step"><b>۱</b><span>مفاهیم</span></div>
+          <div class="session-step"><b>۲</b><span>فرمول‌ها</span></div>
+          <div class="session-step"><b>۳</b><span>نمودار و جدول</span></div>
+          <div class="session-step"><b>۴</b><span>پدیده در سازه</span></div>
+          <div class="session-step"><b>۵</b><span>قضاوت مهندسی</span></div>
+          <div class="session-step"><b>۶</b><span>شکل و کلیپ</span></div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-title"><h2>فضای یادگیری</h2></div>
+        <div class="quick-links">
+          <button class="quick-link" data-panel="notes"><span class="quick-icon">✎</span><span><strong>یادداشت‌های من</strong><small>نکات و برداشت‌های شخصی</small></span><span>←</span></button>
+          <button class="quick-link" data-panel="sources"><span class="quick-icon">▤</span><span><strong>کتابخانه منابع</strong><small>مقالات، استانداردها و گزارش‌ها</small></span><span>←</span></button>
+          <button class="quick-link" data-panel="progress"><span class="quick-icon">⌁</span><span><strong>ارزیابی مهارت‌ها</strong><small>دانش نظری، تحلیل و نرم‌افزار</small></span><span>←</span></button>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-item selected"><span>⌂</span>خانه</button>
+      <button class="nav-item" data-panel="lessons"><span>▤</span>درس‌ها</button>
+      <button class="nav-item" data-panel="progress"><span>⌁</span>پیشرفت</button>
+      <button class="nav-item" data-panel="profile"><span>○</span>پروفایل</button>
+    </nav>
+  </div>
+
+  <dialog id="lessonDialog" class="lesson-dialog">
+    <div class="dialog-header"><button id="closeLesson" class="close-button" type="button">×</button><span class="eyebrow">جلسه ۰۱</span></div>
+    <h2>سازه چگونه رفتار می‌کند؟</h2>
+    <p class="muted">هدف: درک رابطه میان بار، مسیر انتقال بار و پاسخ سازه</p>
+    <div class="lesson-content">
+      <article>
+        <span class="lesson-tag">۱ · مفاهیم</span>
+        <h3>مسیر انتقال بار</h3>
+        <p>بار ثقلی معمولاً از دال به تیر، از تیر به ستون یا دیوار، سپس به فونداسیون و در نهایت به زمین منتقل می‌شود. در بار جانبی، دیافراگم کف نیروها را به سیستم باربر جانبی می‌رساند.</p>
+        <div class="diagram">دال <span>↓</span> تیر <span>↓</span> ستون / دیوار <span>↓</span> فونداسیون <span>↓</span> خاک</div>
+      </article>
+      <article>
+        <span class="lesson-tag">۲ · فرمول</span>
+        <h3>تعادل و پاسخ سازه</h3>
+        <p>در حالت تعادل ایستا، مجموع نیروها و مجموع گشتاورها باید صفر باشند. این شرط به‌تنهایی برای تعیین پاسخ کامل سازه کافی نیست؛ سازگاری تغییرشکل و رابطه مصالح نیز لازم‌اند.</p>
+        <div class="formula">ΣF = 0 &nbsp;&nbsp; ΣM = 0</div>
+      </article>
+      <article>
+        <span class="lesson-tag">۳ · نمودار و جدول</span>
+        <h3>سه پایه تحلیل</h3>
+        <div class="mini-table">
+          <div><b>تعادل</b><span>نیروها و لنگرها</span></div>
+          <div><b>سازگاری</b><span>پیوستگی تغییرشکل</span></div>
+          <div><b>رفتار مصالح</b><span>تنش–کرنش</span></div>
+        </div>
+      </article>
+      <article>
+        <span class="lesson-tag">۴ · پدیده در سازه</span>
+        <h3>وقتی بار وارد می‌شود چه رخ می‌دهد؟</h3>
+        <p>اعضا تغییرشکل می‌دهند، نیروهای داخلی ایجاد می‌شود و سختی نسبی اجزا در توزیع نیرو اثر می‌گذارد. در تحلیل واقعی، هندسه، تکیه‌گاه‌ها، اتصالات و رفتار مصالح هم‌زمان اهمیت دارند.</p>
+      </article>
+      <article>
+        <span class="lesson-tag">۵ · قضاوت مهندسی</span>
+        <h3>مهندس چه چیزی را کنترل می‌کند؟</h3>
+        <p>مهندس فقط عدد خروجی نرم‌افزار را نمی‌پذیرد؛ مسیر انتقال بار، فرضیات مدل، شرایط تکیه‌گاهی، پیوستگی دیافراگم، تعادل واکنش‌ها و معقول‌بودن تغییرشکل‌ها را بررسی می‌کند.</p>
+      </article>
+      <article>
+        <span class="lesson-tag">۶ · تصویر شماتیک</span>
+        <h3>تصویر ذهنی مسیر بار</h3>
+        <p>در نسخه توسعه‌یافته، این بخش شامل شکل‌های مرحله‌ای، نمودارهای نیرو–تغییرمکان و انیمیشن شماتیک خواهد بود.</p>
+      </article>
+    </div>
+    <div class="source-box">
+      <strong>منابع پایه این جلسه</strong>
+      <p>FEMA P-749, Earthquake-Resistant Design Concepts (2010)؛ همچنین فصل‌های مقدماتی تحلیل سازه در منابع دانشگاهی. ارجاع دقیق هر جلسه پیش از انتشار محتوای علمی بررسی می‌شود.</p>
+    </div>
+    <label class="note-label" for="lessonNote">یادداشت این جلسه</label>
+    <textarea id="lessonNote" placeholder="برداشت یا سؤال خودت را اینجا بنویس..."></textarea>
+    <button class="primary-button" id="saveNote" type="button">ذخیره یادداشت</button>
+  </dialog>
+
+  <dialog id="panelDialog" class="lesson-dialog small-dialog">
+    <div class="dialog-header"><button id="closePanel" class="close-button" type="button">×</button><span class="eyebrow">Structure Lab</span></div>
+    <h2 id="panelTitle">بخش آموزشی</h2>
+    <p id="panelText" class="muted">این بخش در مرحله بعد به پایگاه داده و محتوای دوره متصل می‌شود.</p>
+  </dialog>
+
+  <dialog id="authDialog" class="lesson-dialog auth-dialog">
+    <div class="dialog-header"><button id="closeAuth" class="close-button" type="button">×</button><span class="eyebrow">حساب شخصی Structure Lab</span></div>
+    <h2 id="authTitle">ورود به حساب</h2>
+    <p class="muted" id="authHint">این حساب فقط برای دسترسی شخصی و همگام‌سازی اطلاعات خودت بین دستگاه‌هاست.</p>
+    <form id="authForm" class="auth-form">
+      <label for="authEmail">ایمیل</label>
+      <input id="authEmail" type="email" autocomplete="email" placeholder="name@example.com" required />
+      <label for="authPassword">رمز عبور</label>
+      <input id="authPassword" type="password" autocomplete="current-password" minlength="6" placeholder="حداقل ۶ نویسه" required />
+      <p id="authMessage" class="auth-message" role="status" aria-live="polite"></p>
+      <button class="primary-button" id="authSubmit" type="submit">ورود</button>
+    </form>
+    <div class="auth-links">
+      <button id="authModeToggle" type="button">ساخت حساب شخصی (فقط بار اول)</button>
+      <button id="forgotPassword" type="button">فراموشی رمز عبور</button>
+    </div>
+    <button id="signOutBtn" class="secondary-button" type="button" hidden>خروج از حساب</button>
+  </dialog>
+
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>
