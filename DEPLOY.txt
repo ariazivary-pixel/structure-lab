@@ -1,0 +1,5 @@
+برای Cloudflare Pages:
+1. تمام محتوای این پوشه را آپلود کن (ریشه = index.html)
+2. بعد از گرفتن آدرس HTTPS، آن را در Supabase → Auth → URL Configuration ثبت کن
+3. schema.sql را در SQL Editor اجرا کن (اگر قبلاً جدول با ستون body داری، rename کن)
+4. روی آیفون: Safari → Share → Add to Home Screen
